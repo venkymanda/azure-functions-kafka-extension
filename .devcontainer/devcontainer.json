@@ -9,5 +9,8 @@
   "extensions": [
     "ms-azuretools.vscode-docker",
     "redhat.vscode-yaml"
+  ],
+  "forwardedPorts": [
+    9101,9092,9021,8081,8083,8088,8082
   ]
 }
