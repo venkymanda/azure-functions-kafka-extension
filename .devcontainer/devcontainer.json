@@ -1,0 +1,13 @@
+{
+  "name": "Kafka Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "connect",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-yaml"
+  ]
+}
