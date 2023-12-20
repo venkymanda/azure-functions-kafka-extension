@@ -2,7 +2,7 @@
   "name": "Kafka Dev Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "connect",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/samples",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
