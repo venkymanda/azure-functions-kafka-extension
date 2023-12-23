@@ -3,13 +3,12 @@ version: '2'
 services:
 
   azurefunctions:
-    image: mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated6.0-core-tools
+    image: mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated6.0
     hostname: azurefunction
     container_name: azurefunction
     ports:
       - "5100:5100"
-     depends_on:
-      - broker
+    
 
   broker:
     image: confluentinc/cp-kafka:7.5.2

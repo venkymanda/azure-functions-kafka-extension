@@ -10,7 +10,8 @@
     "ms-azuretools.vscode-docker",
     "redhat.vscode-yaml",
     "ms-azuretools.vscode-azurefunctions",
-		"ms-dotnettools.csharp"
+		"ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit"
   ],
   "forwardedPorts": [
     9101,9092,9021,8081,8083,8088,8082
