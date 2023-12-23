@@ -2,7 +2,7 @@
   "name": "Kafka Dev Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "connect",
-  "workspaceFolder": "/samples",
+  "workspaceFolder": "/workspace/azure-functions-kafka-extension",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
