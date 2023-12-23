@@ -22,6 +22,7 @@ namespace KafkaListenerSample
                   ConsumerGroup = "$Default")] string eventData, FunctionContext context)
         {
             var logger = context.GetLogger("KafkaFunction");
+            Console.WriteLine("Welcome");
             logger.LogInformation($"C# Kafka trigger function processed a message: {JObject.Parse(eventData)["Value"]}");
         }
     }
