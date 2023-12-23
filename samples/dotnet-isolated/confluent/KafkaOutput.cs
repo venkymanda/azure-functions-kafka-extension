@@ -22,7 +22,8 @@ namespace Confluent
              _logger.LogInformation("C# HTTP trigger function processed a request.2");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
-            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+            Console.WriteLine("Welcome");
+          
 
             response.WriteString("Welcome to Azure Functions!");
 
