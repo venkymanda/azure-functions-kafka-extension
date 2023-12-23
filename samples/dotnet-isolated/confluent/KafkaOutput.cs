@@ -8,40 +8,29 @@ namespace Confluent
 {
     public class KafkaOutput
     {
+        
+        private readonly ILogger _logger;
+
+        public KafkaOutput(ILoggerFactory loggerFactory)
+        {
+            _logger = loggerFactory.CreateLogger<KafkaOutput>();
+        }
         [Function("KafkaOutput")]
         
-        public static MultipleOutputType Output(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequestData req,
-            FunctionContext executionContext)
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
         {
-            var log = executionContext.GetLogger("HttpFunction");
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string message = req.FunctionContext
-                                .BindingContext
-                                .BindingData["message"]
-                                .ToString();
+             _logger.LogInformation("C# HTTP trigger function processed a request.2");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
-            return new MultipleOutputType()
-            {
-                Kevent = message,
-                HttpResponse = response
-            };
+            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+
+            response.WriteString("Welcome to Azure Functions!");
+
+            return response;
         }
     }
 
-    public class MultipleOutputType
-    {
-        [KafkaOutput("BrokerList",
-                    "topic",
-                    Username = "ConfluentCloudUserName",
-                    Password = "ConfluentCloudPassword",
-            Protocol = BrokerProtocol.SaslSsl,
-            AuthenticationMode = BrokerAuthenticationMode.Plain
-        )]        
-        public string Kevent { get; set; }
-
-        public HttpResponseData HttpResponse { get; set; }
-    }
+    
+        
+    
 }
