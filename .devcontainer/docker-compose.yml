@@ -3,7 +3,7 @@ version: '2'
 services:
 
   azurefunctions:
-    image: mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated6.0
+    #image: mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated6.0
     hostname: azurefunction
     container_name: azurefunction
     build:
