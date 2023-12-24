@@ -5,7 +5,7 @@ using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 
-namespace KafkaListenerSample
+namespace DockerContainerFunction
 {
     public class KafkaListenerLocalCluster
     {

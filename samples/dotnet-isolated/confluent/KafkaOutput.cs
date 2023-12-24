@@ -1,37 +1,30 @@
-using System;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Extensions.Logging;
-using Microsoft.Azure.Functions.Worker.Http;
 using System.Net;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.Extensions.Logging;
 
-namespace Confluent
+namespace DockerContainerFunction
 {
-    public class KafkaOutput
+    public class DockerContainerFunction
     {
-        
         private readonly ILogger _logger;
 
-        public KafkaOutput(ILoggerFactory loggerFactory)
+        public DockerContainerFunction(ILoggerFactory loggerFactory)
         {
-            _logger = loggerFactory.CreateLogger<KafkaOutput>();
+            _logger = loggerFactory.CreateLogger<DockerContainerFunction>();
         }
-        [Function("KafkaOutput")]
-        
+
+        [Function("DockerContainerFunction")]
         public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
         {
-             _logger.LogInformation("C# HTTP trigger function processed a request.2");
+            _logger.LogInformation("C# HTTP trigger function processed a request.");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
-            Console.WriteLine("Welcome");
-          
+            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
             response.WriteString("Welcome to Azure Functions!");
 
             return response;
         }
     }
-
-    
-        
-    
 }
