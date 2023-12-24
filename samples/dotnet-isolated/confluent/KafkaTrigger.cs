@@ -9,6 +9,7 @@ namespace KafkaListenerSample
 {
     public class KafkaListenerLocalCluster
     {
+        /*
         private readonly ILogger _logger;
 
         public KafkaListenerLocalCluster(ILoggerFactory loggerFactory)
@@ -26,5 +27,6 @@ namespace KafkaListenerSample
             Console.WriteLine("Welcome");
             logger.LogInformation($"C# Kafka trigger function processed a message: {JObject.Parse(eventData)["Value"]}");
         }
+        */
     }
 }
