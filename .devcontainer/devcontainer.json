@@ -1,6 +1,6 @@
 {
   "name": "Kafka Dev Container",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "docker-compose.yml",
   "service": "azurefunctions",
   "workspaceFolder": "/workspaces/azure-functions-kafka-extension",
   "settings": {
