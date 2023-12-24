@@ -9,7 +9,7 @@ namespace DockerContainerFunction
 {
     public class KafkaListenerLocalCluster
     {
-        /*
+        
         private readonly ILogger _logger;
 
         public KafkaListenerLocalCluster(ILoggerFactory loggerFactory)
@@ -27,6 +27,6 @@ namespace DockerContainerFunction
             Console.WriteLine("Welcome");
             logger.LogInformation($"C# Kafka trigger function processed a message: {JObject.Parse(eventData)["Value"]}");
         }
-        */
+        
     }
 }

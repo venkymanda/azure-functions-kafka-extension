@@ -4,6 +4,7 @@
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
         "BrokerList": "broker:29092",
-        "topic": "docker-connect-offsets"
+        "topic": "docker-connect-offsets",
+        "KAFKA_TOPIC": "docker-connect-offsets"
     }
 }
