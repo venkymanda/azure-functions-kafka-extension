@@ -9,12 +9,13 @@ using Newtonsoft.Json;
 
 public static class KafkaProducerFunction
 {
+    /*
     private static readonly string KafkaBroker = Environment.GetEnvironmentVariable("BrokerList")??"";
     private static readonly string KafkaTopic = Environment.GetEnvironmentVariable("KAFKA_TOPIC")??"";
 
     [Function("KafkaProducerFunction")]
     public static void Run(
-        [TimerTrigger("*/5 * * * * *")] TimerInfo myTimer,
+        [TimerTrigger("*//*5 * * * * *")] TimerInfo myTimer,
         FunctionContext context)
     {
         var logger = context.GetLogger("KafkaProducerFunction");
@@ -78,5 +79,5 @@ public static class KafkaProducerFunction
                 })
                 .Wait();
         }
-    }
+    }*/
 }
