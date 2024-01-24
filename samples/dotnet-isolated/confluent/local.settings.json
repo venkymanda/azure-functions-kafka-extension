@@ -2,9 +2,9 @@
     "IsEncrypted": false,
     "Values": {
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
-        "BrokerList": "broker:29092",
-        "topic": "docker-connect-offsets",
-        "KAFKA_TOPIC": "docker-connect-offsets"
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+        //"BrokerList": "localhost:9092",
+        //"topic": "users",
+        //"KAFKA_TOPIC": "users"
     }
 }
